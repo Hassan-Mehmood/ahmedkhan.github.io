@@ -52,6 +52,8 @@ html {
     align-items: center;
 }
 
+
+
 .header .logo h2 {
     color: white;
     margin: 2rem;
@@ -74,6 +76,8 @@ html {
     transition: 0.5s;
 }
 
+
+/*--*/
 .links nav ul:hover li a {
     transform: scale(1.5);
     opacity: 0.2;
@@ -175,17 +179,18 @@ html {
     background-color: rgb(22, 22, 22);
     justify-content: center;
     align-items: center;
+    padding: 3rem 0;
 }
 
 .pictureContainer {
-    padding: 6rem 14rem;
+    width: 50%;
 }
 
 .myImage {
-    position: relative;
     width: 40.4rem;
     background-color: rgb(129, 23, 23);
     padding: 0.5rem;
+    margin: 0 auto;
 
 }
 
@@ -196,14 +201,11 @@ html {
 }
 
 .aboutMe {
-    /* position: relative; */
-    width: 50%;
-    height: 100%;
-    padding: 3rem 5rem 5rem 3rem;
     box-sizing: border-box;
-    left: 75.1rem;
-    /* border: 2px solid rgb(129, 23, 23); */
     overflow: hidden;
+    display: block;
+    padding: 2rem;
+    width: 50%;
 }
 
 .aboutMe h1 {
@@ -227,7 +229,7 @@ html {
     padding: 4rem 0px 0px 0px;
     font-size: 2rem;
     line-height: 4rem;
-    color: rgb(221, 113, 248);
+    color: white;
 }
 
 .services {
@@ -276,7 +278,7 @@ html {
 }
 
 .pra p {
-    color: rgb(221, 113, 248);
+    color: white;
     font-size: 1.6rem;
     line-height: 2.5rem;
     margin-bottom: 2.5rem;
@@ -286,10 +288,14 @@ html {
     width: 100%;
     height: 29rem;
     background-color: rgb(22, 22, 22);
+    /* padding: 20px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
+
+    text-align: center;
 }
 
 .contactMe p {
@@ -341,9 +347,10 @@ footer p:nth-child(1) {
 footer p:nth-child(2) {
     font-size: 1.7rem;
     color: white;
-    width: 50rem;
+    width: 43rem;
     text-align: center;
     line-height: 2.6rem;
+    padding: 0 2rem;
 }
 
 .social {
@@ -361,4 +368,113 @@ footer p:nth-child(2) {
     color: rgb(129, 23, 23);
     border-radius: 0.7rem;
     margin: 2.2rem 1rem;
+}
+
+/*-----------------------------------*/
+
+.toggle-button {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 2.2rem;
+    right: 3rem;
+    width: 2.5rem;
+    height: 2rem;
+    justify-content: space-between;
+
+}
+
+.toggle-button .bar {
+    height: 0.3rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.1rem;
+}
+
+@media (max-width: 687px) {
+
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+    }
+
+    .header {
+        padding: 0px;
+        margin: 0px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .first ul {
+        width: 100%;
+        background-color: rgb(34, 32, 32);
+    }
+
+    .links nav ul li {
+        margin: 0px;
+        padding: 0.1rem;
+    }
+
+    .first ul li a {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .first ul li a:hover {
+        background-color: white;
+    }
+
+    .MessageMe {
+        display: none;
+    }
+
+    .links nav {
+        width: 100%;
+    }
+
+    .links nav ul li a:hover {
+        transform: none;
+    }
+
+    .links nav ul:hover li a {
+        transform: none;
+    }
+
+    .introduction {
+        top: 16rem;
+        left: 0.4rem;
+    }
+
+    .links.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 365) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 638) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 784px) {
+    .pictureContainer {
+        width: 100%;
+    }
+
+    .aboutMe {
+        width: 100%;
+    }
 }
